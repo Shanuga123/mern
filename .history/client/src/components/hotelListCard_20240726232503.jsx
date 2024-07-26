@@ -1,18 +1,17 @@
-import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material";
-import axios from "axios";
 import { useState } from "react";
+import { ArrowForwardIos, ArrowBackIosNew, Favorite } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-
+import axios from "axios";
 const PropertyCard = ({
   listingId,
-  hotelPhotoPaths = [],
-  highlight = "",
-  streetAddress = "",
-  type = "",
-  city = "",
-  province = "",
-  title = "",
-  price = "",
+  hotelPhotoPaths,
+  highlight,
+  streetAddress,
+  type,
+  city,
+  province,
+  title,
+  price,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -32,19 +31,22 @@ const PropertyCard = ({
   const handleDelete = async () => {
     try {
       const response = await axios.delete(`http://localhost:8000/properties/${listingId}`);
-      console.log(response.data.message);
-      window.location.reload();
+      console.log(response.data.message); 
+      window.location.reload(); 
     } catch (error) {
       console.error('Failed to delete hotel:', error.response?.data?.message || error.message);
+      // Optionally show an error message to the user
     }
   };
+
+
 
   return (
     <div className="flex items-center p-2 border-b border-gray-200">
       <div className="flex-none w-1/6 relative">
         <div className="overflow-hidden rounded-lg">
           <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-            {hotelPhotoPaths.map((photo, index) => (
+            {hotelPhotoPaths?.map((photo, index) => (
               <div key={index} className="relative flex-none w-full h-50 flex items-center">
                 <img
                   src={`http://localhost:8000/${photo?.replace("public", "")}`}
@@ -92,7 +94,7 @@ const PropertyCard = ({
       <div className="flex-none p-2">
         <button
           className="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600"
-          onClick={() => navigate(`/update-hotel/${listingId}`)}
+          onClick={() => navigate(`/update-hotel/${listingId}`)} 
         >
           Edit
         </button>
