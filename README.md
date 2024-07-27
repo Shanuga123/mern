@@ -19,6 +19,7 @@ Prerequisites
 Node.js (v14.x or later)
 MongoDB
 Git
+
 Backend Setup
 Clone the repository:
 git clone https://github.com/your-username/hotel-management-system.git
