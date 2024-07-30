@@ -1,5 +1,5 @@
 <h1 align="center">
-   HOTEL MANAGEMENT SYSTEM
+   HOTEL MANAGEMENT CRUD 
 </h1>
 
 <h3 align="center">
@@ -52,9 +52,9 @@ node index.js
 Create a file called .env in the backend folder.
 Inside it write this :
 
-MONGO_URL = your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-PORT=8000
+-MONGO_URL = your_mongodb_uri
+-JWT_SECRET=your_jwt_secret
+-PORT=8000
 
 
 
