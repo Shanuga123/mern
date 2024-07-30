@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-This is a simple web application for hotel management with login and registration functionality using React for the frontend and Node.js with Express for the backend. The application utilizes MongoDB for data storage and JWT for authentication.
+This is a simple Crud web application for hotel management with login and registration functionality using React for the frontend and Node.js with Express for the backend. The application utilizes MongoDB for data storage and JWT for authentication.
 </h3>
 
 <br>
@@ -31,7 +31,7 @@ This is a simple web application for hotel management with login and registratio
 - Backend: Node.js, Express.js
 - Database: MongoDB
 - Authentication: JSON Web Tokens (JWT)
- Password Hashing: bcrypt
+- Password Hashing: bcrypt
 
 <br>
 
@@ -69,11 +69,7 @@ npm start
 Now, navigate to `localhost:3000` in your browser. 
 The Backend API will be running at `localhost:8000`.
 
-If this is not working then go to the src > redux > userRelated > userHandle.js
 
-Write this after the import statements :
-
-const REACT_APP_BASE_URL = "http://localhost:8000"
 
 
 
