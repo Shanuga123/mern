@@ -38,7 +38,7 @@ This is a simple Crud web application for hotel management with login and regist
 # Installation
 
 ```sh
-git clone https://github.com/Yogndrr/MERN-School-Management-System.git
+git clone https://github.com/Shanuga123/mern.git
 ```
 Open 2 terminals in separate windows/tabs.
 
