@@ -1,44 +1,83 @@
-Hotel Management System
+<h1 align="center">
+   HOTEL MANAGEMENT SYSTEM
+</h1>
+
+<h3 align="center">
 This is a simple web application for hotel management with login and registration functionality using React for the frontend and Node.js with Express for the backend. The application utilizes MongoDB for data storage and JWT for authentication.
+</h3>
 
-Features
-User registration and login
-JWT-based authentication
-Protected dashboard page accessible only to authenticated users
-Basic CRUD operations on the dashboard for managing hotels
+<br>
 
-Technologies Used
-Frontend: React
-Backend: Node.js, Express.js
-Database: MongoDB
-Authentication: JSON Web Tokens (JWT)
-Password Hashing: bcrypt
 
-Setup and Installation
-Prerequisites
-Node.js (v14.x or later)
-MongoDB
-Git
+<br><br>
 
-Backend Setup
-Clone the repository:
-git clone https://github.com/your-username/hotel-management-system.git
-cd MERN-SAMPLE/backend
-Install the dependencies:
+
+
+## Features
+
+- **User registration and login:** 
+
+- **JWT-based authentication:** 
+
+- **Protected dashboard page accessible only to authenticated users** 
+
+- **Basic CRUD operations on the dashboard for managing hotels**
+  
+
+
+## Technologies Used
+
+- Frontend: React.js, Material UI, Redux
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Authentication: JSON Web Tokens (JWT)
+ Password Hashing: bcrypt
+
+<br>
+
+# Installation
+
+```sh
+git clone https://github.com/Yogndrr/MERN-School-Management-System.git
+```
+Open 2 terminals in separate windows/tabs.
+
+Terminal 1: Setting Up Backend 
+```sh
+cd backend
 npm install
-Create a .env file in the backend directory and add the following environment variables:
-MONGODB_URI=your_mongodb_uri
+node index.js
+```
+
+Create a file called .env in the backend folder.
+Inside it write this :
+
+MONGO_URL = your_mongodb_uri
 JWT_SECRET=your_jwt_secret
 PORT=8000
-Start the backend server:
-node index.js
-Frontend Setup
-Navigate to the frontend directory:
-cd ../frontend
-Install the dependencies:
+
+
+
+Instead of this link write your database link.
+
+Terminal 2: Setting Up Frontend
+```sh
+cd frontend
 npm install
-Start the frontend development server:
 npm start
-Running the Application
-Ensure that both the backend and frontend servers are running.
-Open your browser and navigate to http://localhost:3000.
+```
+Now, navigate to `localhost:3000` in your browser. 
+The Backend API will be running at `localhost:8000`.
+
+If this is not working then go to the src > redux > userRelated > userHandle.js
+
+Write this after the import statements :
+
+const REACT_APP_BASE_URL = "http://localhost:8000"
+
+
+
+<br>
+
+
+
