@@ -52,9 +52,10 @@ node index.js
 Create a file called .env in the backend folder.
 Inside it write this :
 
--MONGO_URL = your_mongodb_uri
--JWT_SECRET=your_jwt_secret
--PORT=8000
+- MONGODB_URI=your_mongodb_uri
+- JWT_SECRET=your_jwt_secret
+- PORT=8000
+
 
 
 
